@@ -1,8 +1,8 @@
-import React, { useState } from 'react';  // Import useState
+import React from 'react';  // Import useState
 import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
+
 import Footer from '../components/Footer';
-import { useNavigate } from 'react-router-dom';  // Import useNavigate
+
 import Signupform from '../components/Signupform';
 
 const Signup = () => {
