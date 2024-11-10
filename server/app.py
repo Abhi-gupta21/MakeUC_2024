@@ -48,6 +48,18 @@ def submit_form():
 
     return jsonify({"message": "User added successfully!"}), 201
 
+@app.route('/api/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    email = data.get('email')
+    password = data.get('password')
+    user = User.query.filter_by(email=email, password=password).first()
+    if user:
+        return jsonify({"message": "Login successful!"}), 200
+    else:
+        return jsonify({"message": "Invalid email or password"}), 401
+
+
 
 CORS(app)
 

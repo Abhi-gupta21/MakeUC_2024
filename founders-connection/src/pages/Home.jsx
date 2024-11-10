@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 
 
 function Home() {
+  
   return (
       <div className="wrapper min-h-screen flex flex-col">
         <Navbar />
-        <Hero className="flex-grow"/>
+        <Hero />
         <Footer />
       </div>
   );
 }
 
-export default Home;
+export default Home; 

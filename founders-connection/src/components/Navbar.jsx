@@ -27,7 +27,7 @@ const Navbar = () => {
 
       {/* Menu Links */}
       <ul 
-        className={`flex lg:flex-row flex-col lg:space-x-8 space-y-4 lg:space-y-0 text-black justify-center font-bold text-xl mt-4 lg:mt-0 ${isOpen ? 'hidden' : 'flex'}`}
+        className={`flex lg:flex-row flex-col lg:space-x-8 space-y-4 lg:space-y-0 text-white justify-center font-bold text-xl mt-4 lg:mt-0 ${isOpen ? 'hidden' : 'flex'}`}
       >
         {/* Home Link */}
         <li className="transition-all duration-300 ease-in-out hover:bg-black hover:bg-opacity-50 hover:text-white hover:rounded-md hover:shadow-lg hover:scale-105 px-4 py-2">
