@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 const Loginform = () => {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const [error, setError] = useState('');  // State for error messages
@@ -25,7 +26,7 @@ const Loginform = () => {
 
             if (response.status === 200) {
                 setAuth(true);  // Set auth to true on successful login
-                navigate('/Home'); // Redirect to the Home page
+                navigate('/People'); // Redirect to the Home page
             } else {
                 throw new Error(`Login failed! ${response.status}`);
             }
@@ -37,7 +38,7 @@ const Loginform = () => {
     // Show different content based on auth state
     function showpage() {
         if (auth) {
-            return <h1>Welcome</h1>;
+            return <People />;
         } else {
             return (
                 <form onSubmit={handleSubmit} className='max-w-2xl mx-auto bg-black bg-opacity-30 shadow-lg m-auto p-8 rounded-lg w-full shadow-lg'>
